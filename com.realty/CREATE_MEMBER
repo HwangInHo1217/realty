@@ -1,0 +1,14 @@
+drop table member;
+create table member(
+	m_idx int unsigned auto_increment,
+	m_email char(50) not null unique,
+	m_pass varchar(100) not null,
+	m_name char(30) not null,
+	m_tel char(11) not null unique,
+	age_ck enum('Y','N') null,
+	m_tos enum('Y','N') null,
+	m_pic enum('Y','N')  null,
+	m_ms enum('Y','N')  null,
+	createdAt timestamp default current_timestamp,
+	primary key(m_idx)
+);

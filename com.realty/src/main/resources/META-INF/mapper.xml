@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 문법에 대한 파일 -->
+<mapper namespace="repository.MemberRepository">
+<!--  dml만 사용가능
+<select id=""></select>
+<insert id=""></insert>
+<update id=""></update>
+<delete id=""></delete>
+'${}': 필드명, 테이블명, 파라미터
+#{}: 값을 적용시킬 떄 사용하는 파라미터 값
+ -->
+ <insert id="saveMember" parameterType="dto.JoinRequestDTO" >
+ insert into member(m_email, m_pass, m_name, m_tel)<!--, age_ck, m_tos, m_pic, m_ms  -->
+ values(#{m_email},#{m_pass},#{m_name},#{m_tel})<!-- ,#{age_ck},#{m_tos},#{m_pic},#{m_ms} -->
+ </insert>
+ <select id="findByEmail" parameterType="dto.LoginRequestDTO" resultType="model.Member">
+ select * from member where m_email = #{m_email}
+ </select>
+ <select id="findByMtel" parameterType="dto.EmailSearchRequestDTO" resultType="model.Member">
+ select * from member where m_tel=#{m_tel}
+ </select>
+ <select id="findByMemailAndMtel" parameterType="dto.SearchPasswordRequestDTO" resultType="model.Member">
+ 	select * from member where m_email=#{m_email} and m_tel=#{m_tel}
+ </select>
+ <update id="changePassword" parameterType="dto.SearchPasswordRequestDTO">
+ 	update set m_pass=#{m_pass} from member where m_email=${m_email}
+ </update>
+</mapper>
