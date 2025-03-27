@@ -1,5 +1,8 @@
+<%@page import="org.springframework.ui.Model"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,12 @@
 				</ul>
 			</div>
 			<div class="text1">
+				<c:if test="${not empty mail}">
 				<div>가입하신 이메일 정보 :${mail}</div>
+				</c:if>
+				<c:if test="${not empty error}">
+				<div>가입하신 이메일 정보 : ${error}</div>
+				</c:if>
 			</div>
 			<div>
 				<input type="button" value="정보확인" class="search_submit" onclick="gologin()">

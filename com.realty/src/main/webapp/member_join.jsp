@@ -37,16 +37,16 @@
 		    <a>휴대폰번호</a> <input type="text" placeholder=" -없이 숫자만 입력해주세요." autocomplete="none" name="m_tel">
 		</div>
 		<div>
-		<input type="checkbox"> <span>전체 동의</span> </div>
+		<input type="checkbox" id="all" onclick="all_chk()"> <span>전체 동의</span> </div>
 		
 		<div class="line"></div>
 		
 	<div class="bottom">	
-		<div class="box1"><input type="checkbox" name="age_ck"> <a class="a1">(필수) <span>만 14세 이상입니다.</span></a></div>
-		<div class="box2"><input type="checkbox" name="m_tos"> <a class="a2">(필수) <span><u>이용약관</u>에 동의</span></a></div>
-		<div class="box3"><input type="checkbox" name="m_pic"> <a class="a3">(필수) <span><u>개인정보 수집 및 이용</u>에 동의</span></a></div>
+		<div class="box1"><input type="checkbox" name="age_ck" id="age_ck"> <a class="a1">(필수) <span>만 14세 이상입니다.</span></a></div>
+		<div class="box2"><input type="checkbox" name="m_tos" id="m_tos"> <a class="a2">(필수) <span><u>이용약관</u>에 동의</span></a></div>
+		<div class="box3"><input type="checkbox" name="m_pic" id="m_pic"> <a class="a3">(필수) <span><u>개인정보 수집 및 이용</u>에 동의</span></a></div>
 		<section class="text1">   </section>
-		<div class="box4"><input type="checkbox" name="m_ms"> <span>(선택) 마케팅 수신에 동의</span></div>
+		<div class="box4"><input type="checkbox" name="m_ms" id="m_ms"> <span>(선택) 마케팅 수신에 동의</span></div>
 		<section class="text2">   </section>
 	</div>
 		<div><input type="button" value="가입 하기" onclick="joinOk()"></div>
@@ -54,5 +54,5 @@
 </main>
 <%@include file="./copyright.jsp" %>
 </body>
-<script src="./js/member_join.js?v=1"></script>
+<script src="./js/member_join.js?v=2"></script>
 </html>

@@ -14,9 +14,7 @@
 <typeAliases>
 <!-- alias : 별명 명칭, type: 패키지와 class명을 사용해야함 -->
 	<typeAlias alias="JoinRequestDTO" type="dto.JoinRequestDTO"/>
-	<typeAlias alias="LoginRequestDTO" type="dto.LoginRequestDTO"/>
-	<typeAlias alias="EmailSearchRequestDTO" type="dto.EmailSearchRequestDTO"/>
-	 <typeAlias alias="ChangePasswordRequestDTO" type="dto.ChangePasswordRequestDTO"/>
-	 <typeAlias alias="SearchPasswordRequestDTO" type="dto.SearchPasswordRequestDTO"/>
+	<typeAlias alias="MemberRequestDTO" type="dto.MemberRequestDTO"/>
+	<typeAlias alias="SaveCounselReqeusetDTO" type="dto.SaveCounselRequestDTO"/>
 </typeAliases>
 </configuration>
