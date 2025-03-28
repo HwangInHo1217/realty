@@ -9,7 +9,8 @@
 <link rel="stylesheet" type="text/css" href="./css/counsel.css?v=3">
 </head>
 <body>
-	<%@ include file="./top.jsp"%>
+	<%@ include file="./layout/top.jsp"%>
+	<%@ include file="./layout/session_no.jsp"%>
 	<main>
 		<section class="sub">
 			<p>상담신청</p>
@@ -70,7 +71,7 @@
 			</div>
 		</section>
 	</main>
-	<%@ include file="./copyright.jsp"%>
+	<%@ include file="./layout/copyright.jsp"%>
 </body>
 <script >
 	function saveCounsel(){

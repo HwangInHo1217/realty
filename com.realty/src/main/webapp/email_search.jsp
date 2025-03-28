@@ -9,8 +9,8 @@
 <link rel="stylesheet" type="text/css" href="./css/email_search.css?v=3">
 </head>
 <body>
-	<%@ include file="./top.jsp"%>
-	<%@ include file="./quickmenu.jsp"%>
+	<%@ include file="./layout/top.jsp"%>
+	<%@ include file="./layout/quickmenu.jsp"%>
 	<main>
 		<form id="frm" method="post"
 			action="${pageContext.request.contextPath}/searchmail">
@@ -40,7 +40,7 @@
 			</section>
 		</form>
 	</main>
-	<%@ include file="./copyright.jsp"%>
+	<%@ include file="./layout/copyright.jsp"%>
 </body>
 <script src="./js/email_search.js?v=1"></script>
 </html>

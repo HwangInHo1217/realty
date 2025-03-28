@@ -28,6 +28,7 @@ public class MemberController {
 	@PostMapping("/join")
 	public String join(@ModelAttribute JoinRequestDTO dto,
 			@RequestParam(defaultValue = "N", required = false) String m_ms) { // @ModelAttribute를 사용하여 폼 데이터를 DTO로 바인딩
+		System.out.println("join 접근 성공 getMapping");
 		try {
 			System.out.println("m_pic: "+dto.getM_pic());
 			this.memberService.saveMember(dto);
@@ -40,7 +41,7 @@ public class MemberController {
 	}
 
 	@PostMapping("/login")
-	public String login(@ModelAttribute MemberRequestDTO dto, HttpSession session, RedirectAttributes redirectAttributes) {
+	public String login(@ModelAttribute MemberRequestDTO dto, HttpSession session, Model model) {
 		System.out.println("login 진입");
 		System.out.println("로그인 "+dto.getM_email());
 		System.out.println("로그인 "+dto.getM_pass());
@@ -49,8 +50,8 @@ public class MemberController {
 			return "redirect:index.jsp";
 		} else {
 			System.out.println("else 분기");
-			redirectAttributes.addFlashAttribute("error", "아이디와 비밀번호 재확인"); // FlashAttributes 사용
-			return "redirect:login.jsp";
+			model.addAttribute("error", "아이디와 비밀번호 재확인"); 
+			return "forward:/login.jsp";
 		}	
 	}
 	@PostMapping("/searchmail")

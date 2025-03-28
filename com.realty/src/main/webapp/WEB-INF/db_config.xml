@@ -51,6 +51,7 @@
 		 <array>
 		 	<value>classpath:/META-INF/member_mapper.xml</value>
 		 	<value>classpath:/META-INF/counsel_mapper.xml</value>
+		 	<value>classpath:/META-INF/sales_mapper.xml</value>
 		 </array>	
 		</property>
 	</bean>

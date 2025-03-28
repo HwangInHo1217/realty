@@ -9,7 +9,8 @@
 <link rel="stylesheet" type="text/css" href="./css/week_tails.css?v=1">
 </head>
 <body>
-<%@ include file="./top.jsp" %>
+<%@ include file="./layout/top.jsp" %>
+<%@ include file="./layout/session_no.jsp"%>
 <main>
 	<div class="weektails">
 		<p>분양정보</p>
@@ -36,7 +37,7 @@
         <div><button class="btn_close">방문예약완료</button></div>
 	</div>
 </main>
-<%@ include file="./copyright.jsp" %>
+<%@ include file="./layout/copyright.jsp" %>
 
 </body>
 </html>

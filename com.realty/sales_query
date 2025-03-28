@@ -1,0 +1,21 @@
+drop table sales;
+create table sales(
+ sales_idx int unsigned auto_increment,
+ s_name varchar(20), 
+ s_addr varchar(100),
+ s_tpye varchar(15),
+ s_let char(4),
+ s_Bdate char(11),
+ s_Adate char(11),
+ s_file_ori text,
+ s_file_new text,
+ s_file_url text,
+ s_file_date timestamp default current_timestamp,
+ s_heatStruct varchar(20),
+ s_total varchar(10),
+ s_part varchar(5),
+ s_corp varchar(20),
+ s_status enum('오픈','접수') default '오픈',
+ createdAt timestamp default current_timestamp,
+ primary key(sales_idx)
+);

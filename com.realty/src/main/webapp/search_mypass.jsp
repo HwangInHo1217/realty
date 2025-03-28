@@ -17,8 +17,9 @@
 <c:if test="${empty sessionScope.dto}">
     <p>세션에 유효한 회원 정보가 없습니다.</p>
 </c:if>
-	<%@include file="./top.jsp"%>
-	<%@include file="./quickmenu.jsp"%>
+	<%@include file="./layout/top.jsp"%>
+	<%@include file="./layout/quickmenu.jsp"%>
+	<%@include file="./layout/session_ok.jsp" %>
 	<main>
 		<form id="frm" method="post" action="changePassword">
 		<!-- 세션에서 'dto' 객체를 가져와서 사용하기 -->
@@ -54,7 +55,7 @@
 			</section>
 		</form>
 	</main>
-	<%@include file="./copyright.jsp"%>
+	<%@include file="./layout/copyright.jsp"%>
 </body>
 <script>
 	

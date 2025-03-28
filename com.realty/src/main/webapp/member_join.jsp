@@ -17,7 +17,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@include file="./top.jsp" %>
+<%@include file="./layout/top.jsp" %>
+<%@include file="./layout/session_ok.jsp" %>
 <main>
 	<form id="f" method="post" action="${pageContext.request.contextPath}/join">
 		<p>이메일로 회원가입</p>
@@ -52,7 +53,7 @@
 		<div><input type="button" value="가입 하기" onclick="joinOk()"></div>
 	</form>
 </main>
-<%@include file="./copyright.jsp" %>
+<%@include file="./layout/copyright.jsp" %>
 </body>
 <script src="./js/member_join.js?v=2"></script>
 </html>

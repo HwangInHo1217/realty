@@ -9,14 +9,14 @@
   <link rel="stylesheet" type="text/css" href="./css/index.css?v=7">
 </head>
 <body>
-<%@include file="./top.jsp"%>
+<%@include file="./layout/top.jsp"%>
 <main>
-<%@include file="./banner.jsp"%>
-<%@include file="./quickmenu.jsp"%>
-<%@include file="./weekinfo.jsp"%>
-<%@include file="./mdchoice.jsp"%>
-<%@include file="./banner.jsp"%>
+<%@include file="./layout/banner.jsp"%>
+<%@include file="./layout/quickmenu.jsp"%>
+<%@include file="./layout/weekinfo.jsp"%>
+<%@include file="./layout/mdchoice.jsp"%>
+<%@include file="./layout/banner.jsp"%>
 </main>
-<%@include file="./copyright.jsp"%>
+<%@include file="./layout/copyright.jsp"%>
 </body>
 </html>

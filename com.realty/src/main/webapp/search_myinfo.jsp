@@ -13,8 +13,9 @@
 	href="./css/search_myinfo.css?v=2">
 </head>
 <body>
-	<%@ include file="./top.jsp"%>
-	<%@ include file="./quickmenu.jsp"%>
+	<%@ include file="./layout/top.jsp"%>
+	<%@ include file="./layout/quickmenu.jsp"%>
+	<%@include file="./layout/session_ok.jsp" %>
 	<main>
 		<section class="sub">
 			<div>
@@ -35,7 +36,7 @@
 			</div>
 		</section>
 	</main>
-	<%@ include file="./copyright.jsp"%>
+	<%@ include file="./layout/copyright.jsp"%>
 </body>
 <script>
 	 function gologin(){

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +11,9 @@
 	href="./css/passwd_search.css?v=2">
 </head>
 <body>
-	<%@ include file="./top.jsp"%>
-	<%@ include file="./quickmenu.jsp"%>
+	<%@ include file="./layout/top.jsp"%>
+	<%@ include file="./layout/quickmenu.jsp"%>
+	<%@include file="./layout/session_ok.jsp" %>
 	<main>
 		<form id="frm" method="post"
 			action="${pageContext.request.contextPath}/searchPassword">
@@ -37,7 +39,7 @@
 			</section>
 		</form>
 	</main>
-	<%@ include file="./copyright.jsp"%>
+	<%@ include file="./layout/copyright.jsp"%>
 </body>
 <script type="text/javascript">
 	function searchPass() {
