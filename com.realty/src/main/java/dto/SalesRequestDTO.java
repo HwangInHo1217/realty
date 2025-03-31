@@ -9,7 +9,7 @@ public class SalesRequestDTO {
 		private int sales_idx;          // auto_increment 기본키
 	    private String s_name;          // 아파트명
 	    private String s_addr;          // 주소
-	    private String s_tpye;          // 종류 (아파트)
+	    private String s_type;          // 종류 (아파트)
 	    private String s_let;           // 임대형태
 	    private String s_Bdate;         // 분양일자
 	    private String s_Adate;         // 입주일자

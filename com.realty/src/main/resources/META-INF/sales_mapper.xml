@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="META-INF.sales_mapper">
+<mapper namespace="repository.SalesRepository">
 
-<select id="findAll" parameterType="dto.SalesRequestDTO" resultSets="dto.SalesRequestDTO">
+<select id="findAll" parameterType="dto.SalesRequestDTO" resultType="dto.SalesRequestDTO">
 SELECT 
     sales_idx, s_name, 
     s_addr, 
@@ -19,5 +19,20 @@ SELECT
 FROM sales;
 
 </select>
-
+<select id="findById" parameterType="dto.SalesRequestDTO" resultType="dto.SalesRequestDTO">
+ SELECT 
+    sales_idx, s_name, 
+    s_addr, 
+    s_tpye, 
+    s_let, 
+    s_Bdate, 
+    s_Adate, 
+    s_file_ori, 
+    s_heatStruct, 
+    s_total, 
+    s_part, 
+    s_corp, 
+    s_status 
+FROM sales where sales_idx = #{sales_idx}
+</select>
 </mapper>

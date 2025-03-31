@@ -26,4 +26,15 @@ public class SalesService {
 		}
 		return result;
 	}
+	public SalesRequestDTO getSalesDTO(int idx) {
+		SalesRequestDTO dto=null;
+		try {
+			dto= salesRepository.findById(idx);
+			
+		} catch (Exception e) {
+			System.out.println("findbyid 예외"+ e.getMessage());
+		}
+		
+		return dto;
+	}
 }

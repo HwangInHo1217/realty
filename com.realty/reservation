@@ -1,0 +1,16 @@
+drop table reservation;
+create table reservation(
+ reservation_idx int unsigned auto_increment,
+ sales_idx int unsigned,
+ m_idx int unsigned,
+ s_name varchar(20),
+ r_date date,
+ r_time time,
+ m_name char(20),
+ s_visitNum enum('1명', '2명'),
+ m_tel char(11),
+ createdAt timestamp default current_timestamp,
+ primary key(reservation_idx),
+ foreign key(m_idx) references member(m_idx),
+ foreign key(sales_idx) references sales(sales_idx)
+);

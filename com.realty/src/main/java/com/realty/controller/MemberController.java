@@ -37,7 +37,7 @@ public class MemberController {
 		}
 
 		System.out.println("진입");
-		return "redirect:/login.jsp";
+		return "redirect:/login";
 	}
 
 	@PostMapping("/login")
@@ -47,7 +47,7 @@ public class MemberController {
 		System.out.println("로그인 "+dto.getM_pass());
 		if (memberService.authenticate(dto, session)) {
 			System.out.println("리다이렉트 전");
-			return "redirect:index.jsp";
+			return "redirect:index";
 		} else {
 			System.out.println("else 분기");
 			model.addAttribute("error", "아이디와 비밀번호 재확인"); 
@@ -95,7 +95,7 @@ public class MemberController {
 		}
 		else{
 			model.addAttribute("error", "비밀번호 변경 실패");
-			return "redirect:index.jsp";
+			return "redirect:index";
 		}
 	}
 	@PostMapping("/requestCounsel")
@@ -108,6 +108,6 @@ public class MemberController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		memberService.logout(session);
-		return "redirect:index.jsp";
+		return "redirect:index";
 	}
 }

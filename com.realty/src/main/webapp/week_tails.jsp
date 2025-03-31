@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>금주 분양 매물 정보</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/week_tails.css?v=1">
+<link rel="stylesheet" type="text/css" href="../css/index.css?v=1">
+<link rel="stylesheet" type="text/css" href="../css/week_tails.css?v=1">
 </head>
 <body>
 <%@ include file="./layout/top.jsp" %>
@@ -15,29 +15,42 @@
 	<div class="weektails">
 		<p>분양정보</p>
 		<div id="weektails">
+<c:if test="${not empty sale}">
 			<p>LH센트럴힐(공공임대)</p>
             <ul>
                 <li>종류</li>
-                <li>아파트 | 공공임대 </li>
+                <li>${sale.s_name} | ${sale.s_let} </li>
                 <li>주소</li>
-				<li>서울시 송파구 문정동 12-2</li>
+				<li>${sale.s_addr}</li>
                 <li>규모</li>
-				<li>총 104세대 | 총 2개동</li>
+				<li>${sale.s_total} |${sale.s_part} </li>
                 <li>시기</li>
-				<li>2025.04 분양 | 2027.02 입주</li>
+				<li>${sale.s_Bdate} |${sale.s_Adate}</li>
                 <li>난방구조</li>
-				<li>개별난방,도시가스</li>
+				<li>${sale.s_heatStruct}</li>
                 <li>건설사</li>
-				<li>GS건설㈜</li>
+				<li>${sale.s_corp}</li>
                 <li>사진정보</li>
-				<li><img src="./room/room1.jpg"></li>
+				<li><img src="../room/${sale.s_file_ori}"></li>
             </ul>
+</c:if>	
 		</div>
-        <div><button class="btn_css">방문예약</button></div>
+		<c:if test="${sale.s_status eq '오픈'}">
+        <div><button class="btn_css" onclick="goReservation()">방문예약</button></div>
+		</c:if><c:if test="${sale.s_status eq '접수'}">
         <div><button class="btn_close">방문예약완료</button></div>
+        </c:if>
 	</div>
+	<form id="frm" method="post" action="${pageContext.request.contextPath}/reservation">
+		<input type="hidden" value="${sale}" name="sale">
+	</form>
 </main>
 <%@ include file="./layout/copyright.jsp" %>
 
 </body>
+<script>
+function goReservation(idx){
+	frm.submit();
+}
+</script>
 </html>
