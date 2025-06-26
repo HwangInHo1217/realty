@@ -3,6 +3,6 @@
 <c:if test="${empty sessionScope.member}">
 	<script>
 	alert("로그인후 이용가능");
-	location.href="/com.realty/index.jsp";		
+	location.href="/index";		
 	</script>
 </c:if>

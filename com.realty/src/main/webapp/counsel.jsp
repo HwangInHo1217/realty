@@ -49,12 +49,12 @@
 							아파트
 					</label>
 					 <label>
-							 <input type="radio" class="sel_check" name="c_type" value="빌라, 단독주택">
-							빌라,단독주택
+							 <input type="radio" class="sel_check" name="c_type" value="빌라,단독주택">
+							빌라, 단독주택
 					</label> 
 					<label>
-							<input type="radio" class="sel_check" name="c_type" value="사무실, 상가, 빌딩">
-							사무실.상가.빌딩
+							<input type="radio" class="sel_check" name="c_type" value="사무실,상가,빌딩">
+							사무실, 상가, 빌딩
 					</label>
 					</li>
 			<li>상담일시</li>

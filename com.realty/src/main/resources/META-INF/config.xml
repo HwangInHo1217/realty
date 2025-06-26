@@ -17,5 +17,7 @@
 	<typeAlias alias="MemberRequestDTO" type="dto.MemberRequestDTO"/>
 	<typeAlias alias="SaveCounselReqeusetDTO" type="dto.SaveCounselRequestDTO"/>
 	<typeAlias alias="SalesRequestDTO" type="dto.SalesRequestDTO"/>
+	<typeAlias alias="ReservationRequestDTO" type="dto.ReservationRequestDTO"/>
+	<typeAlias alias="BoardRequestDTO" type="dto.BoardRequestDTO"/>
 </typeAliases>
 </configuration>

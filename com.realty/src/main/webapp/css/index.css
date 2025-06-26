@@ -339,7 +339,11 @@ main > section:nth-of-type(4) {
 .recommend > .md_estates > ul {
   width: inherit;
   height: auto;
-  display:inline-block;
+  display: flex; /* ✅ 변경: inline-block → flex */
+  flex-wrap: wrap; /* ✅ 여러 줄로 정렬 허용 */
+  gap: 10px; /* ✅ 카드 간격 */
+  justify-content: center; /* ✅ 가운데 정렬 */
+  list-style: none;
 }
 .recommend > .md_estates > ul > a > li {
   width:265px;
@@ -458,7 +462,28 @@ footer{
 }
 
 .logos {
-  width: 100px;
+  width: 170px;
   height: 100px;
   object-fit: cover;
 }
+
+.login_info {
+  position: absolute;
+  width: 170px;
+  height: auto;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  background-color: white;
+  left: -100px;
+  bottom: -30px;
+}
+.login_info > li{
+  width: inherit;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+

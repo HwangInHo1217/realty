@@ -22,8 +22,9 @@ public class CounselController {
 	
 		System.out.println(dto.getC_content());
 		counselService.save(dto);
-		return "index.jsp";
+		return "redirect:/index";
 	}
+	
 
 	
 

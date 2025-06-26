@@ -37,7 +37,7 @@ public class MemberController {
 		}
 
 		System.out.println("진입");
-		return "redirect:/login";
+		return "/login";
 	}
 
 	@PostMapping("/login")

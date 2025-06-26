@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="repository.ReservationRespository">
+<insert id="saveReservation" parameterType="dto.ReservationRequestDTO">
+    INSERT INTO Reservation (sales_idx, m_idx, s_name, r_date, r_time, m_name, r_visitNum, m_tel)
+    VALUES (#{sales_idx}, #{m_idx}, #{s_name}, #{r_date}, #{r_time}, #{m_name}, #{r_visitNum}, #{m_tel})
+</insert>
+<select id="findBySidx" parameterType="dto.SalesRequestDTO" resultType="dto.ReservationRequestDTO" >
+	select reservation_idx,m_idx, sales_idx from Reservation where sales_idx=#{sales_idx}
+</select>
+<select id="findByIdx" parameterType="dto.ReservationRequestDTO" resultType="dto.ReservationRequestDTO">
+	select * from Reservation where reservation_idx=#{resrvation_idx}
+</select>
+
+<select id="findByTel" parameterType="String" resultType="dto.ReservationRequestDTO">
+    SELECT * FROM Reservation WHERE m_tel = #{m_tel} ORDER BY r_date DESC, r_time ASC
+</select>
+
+<delete id="deleteByIdx" parameterType="int">
+    DELETE FROM Reservation WHERE reservation_idx = #{reservation_idx}
+</delete>
+</mapper>

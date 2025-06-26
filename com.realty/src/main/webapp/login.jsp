@@ -18,7 +18,7 @@
             <div><input type="text" name="m_email" placeholder="이메일 주소"></div>
             <div><input type="password" name="m_pass" placeholder="비밀번호"></div>
             <div><input type="button" value="로그인" onclick="login()"></div>
-            <div><input type="button" value="카카오로그인" class="kakao_btn"></div>
+            <!-- <div><input type="button" value="카카오로그인" class="kakao_btn"></div> -->
             <div>
                 <span><a href="./email_search.jsp">이메일 찾기</a></span>
                 <span><a href="./passwd_search.jsp">비밀번호 찾기</a></span>

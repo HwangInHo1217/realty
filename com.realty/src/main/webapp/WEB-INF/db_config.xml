@@ -38,7 +38,8 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/realty" />
 		<property name="username" value="root" />
-		<property name="password" value="5951" />
+		 <property name="password" value="dlsgh2711@#" />
+		<!-- <property name="password" value="admin1217" />-->
 	</bean>
 	<!-- Mybatis Template(interface) -->
 	<bean id="sqlfact"
@@ -52,6 +53,8 @@
 		 	<value>classpath:/META-INF/member_mapper.xml</value>
 		 	<value>classpath:/META-INF/counsel_mapper.xml</value>
 		 	<value>classpath:/META-INF/sales_mapper.xml</value>
+		 	<value>classpath:/META-INF/reservation_mapper.xml</value>
+		 	<value>classpath:/META-INF/board_mapper.xml</value>
 		 </array>	
 		</property>
 	</bean>

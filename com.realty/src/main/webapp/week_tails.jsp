@@ -35,14 +35,14 @@
             </ul>
 </c:if>	
 		</div>
-		<c:if test="${sale.s_status eq '오픈'}">
-        <div><button class="btn_css" onclick="goReservation()">방문예약</button></div>
-		</c:if><c:if test="${sale.s_status eq '접수'}">
-        <div><button class="btn_close">방문예약완료</button></div>
+		<c:if test="${r_dto.m_idx ne sessionScope.member.m_idx}">
+        <div><button class="btn_css" onclick="goReservation(${sale.sales_idx})">방문예약</button></div>
+		</c:if><c:if test="${r_dto.m_idx eq sessionScope.member.m_idx}">
+        <div><button class="btn_close" onclick="goDetailReservation(${r_dto.reservation_idx})">방문예약완료</button></div>
         </c:if>
 	</div>
-	<form id="frm" method="post" action="${pageContext.request.contextPath}/reservation">
-		<input type="hidden" value="${sale}" name="sale">
+	<form id="frm">
+		<input type="hidden" value="" name="id">
 	</form>
 </main>
 <%@ include file="./layout/copyright.jsp" %>
@@ -50,6 +50,16 @@
 </body>
 <script>
 function goReservation(idx){
+	frm.id.value=idx;
+	frm.method="get";
+	frm.action="${pageContext.request.contextPath}/reservation";
+	console.log(frm.id.value);
+	frm.submit();
+}
+function goDetailReservation(idx){
+	frm.method="get"
+	frm.action="${pageContext.request.contextPath}/reservation/"+idx;
+	frm.id.value=idx;
 	frm.submit();
 }
 </script>
